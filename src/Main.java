@@ -57,7 +57,7 @@ public class Main {
 
 
         // 문자열 두 개 입력받기 (공백으로 구분)
-        System.out.print("이름 입력 (예: JEROEN JAN): ");
+        System.out.print("이름 입력 : ");
         String name2 = sc.next();  // 첫 번째 단어 (공백 전까지)
 
 

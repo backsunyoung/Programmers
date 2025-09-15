@@ -13,7 +13,7 @@ public class joystick {
 
                 names[i] = name.charAt(i);
 
-
+//
             }
 
             for(int i = 0; i < name.length(); i++){
@@ -28,13 +28,15 @@ public class joystick {
                     System.out.println(sum);
                 }else if (ascii >= ('A'+13)){ // 79
                     System.out.println(ascii + "는 후");
-                    sum += ('Z' - ascii);
+                    sum += ('Z' - ascii+1);
                     System.out.println(sum);
-                }
+                }// 9 4 8 11 4 13 / 9 13 21 32 36 49
 
 
 
             }
+
+            sum = sum + name.length()-1;
 
 
             int answer = sum;
