@@ -57,17 +57,35 @@ public class Main {
 
 
         // 문자열 두 개 입력받기 (공백으로 구분)
-        System.out.print("이름 입력 : ");
-        String name2 = sc.next();  // 첫 번째 단어 (공백 전까지)
+//        System.out.print("이름 입력 : ");
+//        String name2 = sc.next();  // 첫 번째 단어 (공백 전까지)
+//
+//
+//        joystick joystick = new joystick();
+//        joystick.Solution solution = joystick.new Solution();
+//
+//        int answer2 = solution.solution(name2);
+//
+//        // 결과 출력
+//        System.out.println("조이스틱 조작 횟수 : " + answer2);
 
 
-        joystick joystick = new joystick();
-        joystick.Solution solution = joystick.new Solution();
 
-        int answer2 = solution.solution(name2);
+        System.out.print("number 입력: ");
+        String number = sc.nextLine();
+
+        System.out.print("k 입력: ");
+        int k = sc.nextInt();
+
+        // Solution 객체 생성 후 메서드 호출
+        MakeTheHighestNum makeTheHighestNum = new MakeTheHighestNum();
+        MakeTheHighestNum.Solution solution = makeTheHighestNum.new Solution();
+        String result = solution.solution(number, k);
 
         // 결과 출력
-        System.out.println("조이스틱 조작 횟수 : " + answer2);
+        System.out.println("결과: " + result);
+
+
 
         sc.close();
 
