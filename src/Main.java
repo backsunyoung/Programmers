@@ -71,19 +71,42 @@ public class Main {
 
 
 
-        System.out.print("number 입력: ");
-        String number = sc.nextLine();
+//        System.out.print("number 입력: ");
+//        String number = sc.nextLine();
+//
+//        System.out.print("k 입력: ");
+//        int k = sc.nextInt();
+//
+//        // Solution 객체 생성 후 메서드 호출
+//        MakeTheHighestNum makeTheHighestNum = new MakeTheHighestNum();
+//        MakeTheHighestNum.Solution solution = makeTheHighestNum.new Solution();
+//        String result = solution.solution(number, k);
+//
+//        // 결과 출력
+//        System.out.println("결과: " + result);
 
-        System.out.print("k 입력: ");
-        int k = sc.nextInt();
+        // 사람 수 입력
+        System.out.print("태울 사람 수를 입력하세요 : ");
+        int n = sc.nextInt();
 
-        // Solution 객체 생성 후 메서드 호출
-        MakeTheHighestNum makeTheHighestNum = new MakeTheHighestNum();
-        MakeTheHighestNum.Solution solution = makeTheHighestNum.new Solution();
-        String result = solution.solution(number, k);
+        // 몸무게 배열 입력
+        int[] people = new int[n];
+        System.out.println("각 몸무게들을 입력하세요 :");
+        for (int i = 0; i < n; i++) {
+            people[i] = sc.nextInt();
+        }
 
-        // 결과 출력
-        System.out.println("결과: " + result);
+        // 보트 무게 제한 입력
+        System.out.print("보트 무게 제한을 입력하세요 : ");
+        int limit = sc.nextInt();
+
+        // Solution 실행
+        boat boat = new boat();
+        boat.Solution solution = boat.new Solution();
+        int result = solution.solution(people, limit);
+
+        System.out.println("필요한 최소 보트 수는 : " + result);
+
 
 
 
